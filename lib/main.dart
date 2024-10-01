@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:mytodo_app/home/homescreen.dart';
+import 'package:mytodo_app/splash_screen/splashscrren.dart';
+
+import 'home/homescreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,8 +15,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'To Do App',
-      initialRoute: HomeScreen.routeName,
+      debugShowCheckedModeBanner: false,
+      initialRoute: SplashScreen.routeName,
       routes: {
+        SplashScreen.routeName: (context) => const SplashScreen(),
         HomeScreen.routeName: (context) => HomeScreen(),
       },
     );
